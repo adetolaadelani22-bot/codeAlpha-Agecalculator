@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <title>Age Calculator</title>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" href="style.css" />
+</head>
+       <body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Age Calculator</h1>
+      <p class="subtitle">Find out your exact age in years, months and days</p>
+    </div>
+
+    <div class="form-card">
+      <div class="input-group">
+        <label>Day</label>
+        <input type="number" id="day" placeholder="DD" min="1" max="31"/>
+      </div>
+
+      <div class="input-group">
+        <label>Month</label>
+        <input type="number" id="month" placeholder="MM" min="1" max="12"/>
+      </div>
+
+      <div class="input-group">
+        <label>Year</label>
+        <input type="number" id="year" placeholder="YYYY" min="1900" max="2025"/>
+      </div>
+
+      <div id="error-msg" class="error-msg"></div>
+
+      <button onclick="calculateAge()">Calculate My Age</button>
+    </div>
+
+    <div id="result" class="result-card">
+      <div class="result-grid">
+        <div class="result-block">
+          <span class="result-num" id="res-years">0</span>
+          <span class="result-label">Years</span>
+        </div>
+        <div class="result-block">
+          <span class="result-num" id="res-months">0</span>
+          <span class="result-label">Months</span>
+        </div>
+        <div class="result-block">
+          <span class="result-num" id="res-days">0</span>
+          <span class="result-label">Days</span>
+        </div>
+      </div>
+      <p id="res-summary" class="res-summary"></p>
+    </div>
+  </div>
+
+  <script src="scrip.js"></script>
+</body>
+</html>
